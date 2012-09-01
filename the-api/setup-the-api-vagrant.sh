@@ -51,7 +51,7 @@ vagrant ssh -c"git config --global user.email \"$useremail\""
 vagrant ssh -c"git config --global color.ui \"auto\""
 
 vagrant ssh -c'sudo install -g vagrant -o vagrant -d /home/ec2-user'
-#vagrant ssh -c'cd /home/ec2-user; git clone git@robertmaefs.unfuddle.com:robertmaefs/the-api.git'
-#vagrant ssh -c'cd /etc/nginx/conf.d/; sudo ln -s /home/ec2-user/the-api/etc/nginx/conf.d/the-api.conf .'
-#vagrant ssh -c'mkdir -p /home/ec2-user/the-api/logs'
-#vagrant ssh -c'/home/ec2-user/the-api/script/restart-dev-things.sh'
+vagrant ssh -c'cd /home/ec2-user; git clone https://github.com/mikecanz/the-api.git'
+vagrant ssh -c'cd /etc/nginx/conf.d/; sudo ln -s /home/ec2-user/the-api/etc/nginx/conf.d/the-api.conf .'
+vagrant ssh -c'mkdir -p /home/ec2-user/the-api/logs'
+vagrant ssh -c'/home/ec2-user/the-api/script/restart-dev.sh'
