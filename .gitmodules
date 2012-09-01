@@ -1,0 +1,3 @@
+[submodule "the-api/aws-ec2-puppet"]
+	path = the-api/aws-ec2-puppet
+	url = git://github.com/mikecanz/aws-ec2-puppet.git
