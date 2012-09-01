@@ -35,8 +35,7 @@ Vagrant::Config.run do |config|
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
   #
-  # You shouldn't need to do this but I left it here in case you did need to
-  # config.vm.share_folder "v-data", "/home/ec2-user/sg-constable", "sg-constable"
+  # config.vm.share_folder "v-data", "/home/ec2-user/", "some-dir"
 
   
   config.vm.provision :puppet, :facter => { "ec2_security_groups" => "webserver-nginx,db-mongo" } do |puppet|
