@@ -8,7 +8,7 @@ git pull
 cd ../
 git submodule init
 git submodule update
-cd the-api
+cd basic-php
 
 # Then we need to update the puppet repo
 cd aws-ec2-puppet
@@ -30,8 +30,8 @@ fi
 vagrant up
 vagrant reload
 
-vagrant ssh -c"sudo FACTER_ec2_security_groups=webserver-nginx,db-mongo /usr/bin/puppet apply --verbose --modulepath /vagrant/aws-ec2-puppet/modules /vagrant/aws-ec2-puppet/manifests/nodes.pp" # Yet another puppet run
-vagrant ssh -c"sudo FACTER_ec2_security_groups=webserver-nginx,db-mongo /usr/bin/puppet apply --verbose --modulepath /vagrant/aws-ec2-puppet/modules /vagrant/aws-ec2-puppet/manifests/nodes.pp" # Yet another puppet run
+vagrant ssh -c"sudo FACTER_ec2_security_groups=webserver-httpd,db-mongo /usr/bin/puppet apply --verbose --modulepath /vagrant/aws-ec2-puppet/modules /vagrant/aws-ec2-puppet/manifests/nodes.pp" # Yet another puppet run
+vagrant ssh -c"sudo FACTER_ec2_security_groups=webserver-httpd,db-mongo /usr/bin/puppet apply --verbose --modulepath /vagrant/aws-ec2-puppet/modules /vagrant/aws-ec2-puppet/manifests/nodes.pp" # Yet another puppet run
 
 ####################################################################################
 # If you have private repos setup somewhere you can put your keys and hosts
